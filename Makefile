@@ -1,7 +1,7 @@
 
 # borrowed from https://github.com/technosophos/helm-template
 
-HELM_VERSION := 3.19.4
+HELM_VERSION := 4.1.3
 VERSION := $(shell sed -n -e 's/version:[ "]*\([^"]*\).*/\1/p' plugin.yaml)
 DIST := ./_dist
 LDFLAGS := "-X github.com/helm-unittest/helm-unittest/internal/build.version=${VERSION} -extldflags '-static'"
@@ -30,8 +30,8 @@ help:
 
 .PHONY: plugin-dir
 plugin-dir:
-	$(eval HELM_3_PLUGINS := $(shell helm env | grep HELM_PLUGINS | cut -d '=' -f 2 | tr -d '"'))
-	$(eval HELM_PLUGIN_DIR := $(HELM_3_PLUGINS)/helm-unittest)
+	$(eval HELM_PLUGINS_VALUE := $(shell helm env | grep HELM_PLUGINS | cut -d '=' -f 2 | tr -d '"'))
+	$(eval HELM_PLUGIN_DIR := $(HELM_PLUGINS_VALUE)/helm-unittest)
 
 .PHONY: install
 install: bootstrap build plugin-dir

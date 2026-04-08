@@ -14,7 +14,7 @@ import (
 	"github.com/helm-unittest/helm-unittest/pkg/unittest/snapshot"
 	log "github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
-	v3loader "helm.sh/helm/v3/pkg/chart/loader"
+	v3loader "helm.sh/helm/v4/pkg/chart/v2/loader"
 )
 
 // Most used test files
@@ -44,8 +44,14 @@ const testV3WitSamenameSubSubChart string = "../../test/data/v3/with-samenamesub
 const testV3WithDocumentSelectorChart string = "../../test/data/v3/with-document-select"
 const testV3WithFakeK8sClientChart string = "../../test/data/v3/with-k8s-fake-client"
 const testV3WithPostRendererChart string = "../../test/data/v3/with-post-renderer"
+const testHelmPluginsDir string = "testdata/helmplugins"
 
 var tmpdir, _ = os.MkdirTemp("", testSuiteTests)
+
+func setPostRendererPluginEnv(t *testing.T) {
+	t.Helper()
+	t.Setenv("HELM_PLUGINS", testHelmPluginsDir)
+}
 
 func makeTestSuiteResultSnapshotable(result *results.TestSuiteResult) *results.TestSuiteResult {
 
