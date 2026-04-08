@@ -8,7 +8,7 @@ on:
 env:
   REGISTRY_IMAGE: helmunittest/helm-unittest
   HELM_REPO: helm/helm
-  PLUGIN_REPO: helm-unittest/helm-unittest
+  PLUGIN_REPO: Szpadel/helm-unittest
   GO_VERSION: 1.25.x
 
 jobs:

@@ -1,6 +1,6 @@
 
 $PROJECT_NAME = "helm-unittest"
-$PROJECT_GH = "helm-unittest/$PROJECT_NAME"
+$PROJECT_GH = "Szpadel/$PROJECT_NAME"
 $PROJECT_CHECKSUM_FILE = "$PROJECT_NAME-checksum.sha"
 $HELM_PLUGIN_PATH = $env:HELM_PLUGIN_DIR
 
@@ -202,6 +202,6 @@ try {
 }
 catch {
     Write-Error "Failed to install $PROJECT_NAME"
-    Write-Host "For support, go to https://github.com/helm-unittest/helm-unittest/blob/main/FAQ.md"
+    Write-Host "For support, go to https://github.com/Szpadel/helm-unittest/blob/main/FAQ.md"
     exit 1
 }

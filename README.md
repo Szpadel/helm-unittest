@@ -1,12 +1,12 @@
 # helm unittest
 
-[![Release](https://img.shields.io/github/v/release/helm-unittest/helm-unittest)](https://github.com/helm-unittest/helm-unittest/releases)
-[![Github Actions](https://github.com/helm-unittest/helm-unittest/actions/workflows/go.yml/badge.svg)](https://github.com/helm-unittest/helm-unittest/actions)
-[![License](https://img.shields.io/github/license/helm-unittest/helm-unittest)](https://github.com/helm-unittest/helm-unittest/blob/main/LICENSE)
-[![Go Report Card](https://goreportcard.com/badge/github.com/helm-unittest/helm-unittest)](https://goreportcard.com/report/github.com/helm-unittest/helm-unittest)
+[![Release](https://img.shields.io/github/v/release/Szpadel/helm-unittest)](https://github.com/Szpadel/helm-unittest/releases)
+[![Github Actions](https://github.com/Szpadel/helm-unittest/actions/workflows/go.yml/badge.svg)](https://github.com/Szpadel/helm-unittest/actions)
+[![License](https://img.shields.io/github/license/Szpadel/helm-unittest)](https://github.com/Szpadel/helm-unittest/blob/main/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/Szpadel/helm-unittest)](https://goreportcard.com/report/github.com/Szpadel/helm-unittest)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=helm-unittest_helm-unittest&metric=alert_status)](https://sonarcloud.io/dashboard?id=helm-unittest_helm-unittest)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/9365/badge)](https://www.bestpractices.dev/projects/9365)
-[![OpenSSF](https://api.scorecard.dev/projects/github.com/helm-unittest/helm-unittest/badge)](https://scorecard.dev/viewer/?uri=github.com/helm-unittest/helm-unittest)
+[![OpenSSF](https://api.scorecard.dev/projects/github.com/Szpadel/helm-unittest/badge)](https://scorecard.dev/viewer/?uri=github.com/Szpadel/helm-unittest)
 
 Unit test for _helm chart_ in YAML to keep your chart consistent and robust!
 
@@ -46,7 +46,7 @@ If you are ready for writing tests, check the [DOCUMENT](./DOCUMENT.md) for the 
 ## Install
 
 ```
-$ helm plugin install https://github.com/helm-unittest/helm-unittest.git
+$ helm plugin install https://github.com/Szpadel/helm-unittest.git
 ```
 
 It will install the latest version of binary into helm plugin directory.
@@ -327,7 +327,7 @@ In addition, test-suite files can be validated while editing so wrongfully added
 When developing with VSCode, the very popular YAML plug-in (created by RedHat) allows adding references to schemas by adding a comment line on top of the file:
 
 ```yaml
-# yaml-language-server: $schema=https://raw.githubusercontent.com/helm-unittest/helm-unittest/main/schema/helm-testsuite.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Szpadel/helm-unittest/main/schema/helm-testsuite.json
 suite: http-service.configmap_test.yaml
 templates: [configmap.yaml]
 release:
@@ -339,7 +339,7 @@ Alternatively, you can add the schema globally to the IDE, using a well defined 
 
 ```json
 "yaml.schemas": {
-  "https://raw.githubusercontent.com/helm-unittest/helm-unittest/main/schema/helm-testsuite.json": ["charts/*/tests/*_test.yaml"]
+  "https://raw.githubusercontent.com/Szpadel/helm-unittest/main/schema/helm-testsuite.json": ["charts/*/tests/*_test.yaml"]
 }
 ```
 

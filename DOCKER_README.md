@@ -1,18 +1,18 @@
 # Kubernetes Helm Unittest plugin #
 
-Auto trigger docker build for [kubernetes helm unittest plugin](https://github.com/helm-unittest/helm-unittest) when a new release is created. </br>
+Auto trigger docker build for [kubernetes helm unittest plugin](https://github.com/Szpadel/helm-unittest) when a new release is created. </br>
 The build comes with latest 3 version. </br>
-More information on how to use the helm unittest plugin see https://github.com/helm-unittest/helm-unittest/blob/main/DOCUMENT.md
+More information on how to use the helm unittest plugin see https://github.com/Szpadel/helm-unittest/blob/main/DOCUMENT.md
 
 # README #
 
-The latest docker tag is the latest helm release (https://github.com/helm/helm/releases/latest) containing the latest helm unittest plugin (https://github.com/helm-unittest/helm-unittest/releases/latest)
+The latest docker tag is the latest helm release (https://github.com/helm/helm/releases/latest) containing the latest helm unittest plugin (https://github.com/Szpadel/helm-unittest/releases/latest)
 
 Please be aware to use the latest tag, as it can change the helm client and the helm unittest plugin version. Tag with the right versions is the proper way, such as ``` helmunittest/helm-unittest:3.11.1-0.3.0 ```
 
 ## Github Repo ##
 
-https://github.com/helm-unittest/helm-unittest/ </br>
+https://github.com/Szpadel/helm-unittest/ </br>
 *Location of the repo containing the plugin and scripts to generate the docker images*
 
 ## Docker image tags ##
@@ -37,7 +37,7 @@ docker run -ti --rm -v $(pwd):/apps helmunittest/helm-unittest:3.11.1-0.3.0 .
 # the test-output.xml will be available in the local folder.
 docker run -ti --rm -v $(pwd):/apps helmunittest/helm-unittest:3.11.1-0.3.0 -o test-output.xml .
 ```
-*More information on how to use the helm unittest plugin see https://github.com/helm-unittest/helm-unittest/blob/main/DOCUMENT.md*
+*More information on how to use the helm unittest plugin see https://github.com/Szpadel/helm-unittest/blob/main/DOCUMENT.md*
 
 # Who can benefit from these image(s) #
 

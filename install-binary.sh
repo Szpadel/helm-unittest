@@ -3,7 +3,7 @@
 # borrowed from https://github.com/technosophos/helm-template
 
 PROJECT_NAME="helm-unittest"
-PROJECT_GH="helm-unittest/$PROJECT_NAME"
+PROJECT_GH="Szpadel/$PROJECT_NAME"
 PROJECT_CHECKSUM_FILE="$PROJECT_NAME-checksum.sha"
 HELM_PLUGIN_PATH="$HELM_PLUGIN_DIR"
 
@@ -27,7 +27,7 @@ if [ "$SKIP_BIN_DOWNLOAD" = "1" ]; then
   cp -f untt $HELM_PLUGIN_PATH/untt
   chmod +x $HELM_PLUGIN_PATH/untt
   echo "$PROJECT_NAME installed into $HELM_PLUGIN_PATH"
-  exit 
+  exit
 fi
 
 # initArch discovers the architecture for this system.
@@ -85,7 +85,7 @@ getDownloadURL() {
   # If no version found (because of no git), try fetch from plugin
   if [ -z "$version" ]; then
     echo "No version found"
-    version=v$(sed -n -e 's/version:[ "]*\([^"]*\).*/\1/p' plugin.yaml)  
+    version=v$(sed -n -e 's/version:[ "]*\([^"]*\).*/\1/p' plugin.yaml)
   fi
 
   # Setup Download Url
@@ -155,7 +155,7 @@ fail_trap() {
   result=$?
   if [ "$result" != "0" ]; then
     echo "Failed to install $PROJECT_NAME"
-    echo "For support, go to https://github.com/helm-unittest/helm-unittest/blob/main/FAQ.md"
+    echo "For support, go to https://github.com/Szpadel/helm-unittest/blob/main/FAQ.md"
   fi
   exit $result
 }

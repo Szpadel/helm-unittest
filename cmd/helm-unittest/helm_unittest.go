@@ -65,7 +65,7 @@ Or specify the suite files glob path pattern:
 
 $ helm unittest -f 'my-tests/*.yaml' my-chart
 
-Check https://github.com/helm-unittest/helm-unittest for more
+Check https://github.com/Szpadel/helm-unittest for more
 details about how to write tests.
 `,
 	Args: cobra.MinimumNArgs(1),

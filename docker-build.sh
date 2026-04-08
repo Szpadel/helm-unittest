@@ -38,7 +38,7 @@ build() {
 
 image="helmunittest/helm-unittest"
 helmRepo="helm/helm"
-pluginRepo="helm-unittest/helm-unittest"
+pluginRepo="Szpadel/helm-unittest"
 
 if [[ $CI == 'true' ]]; then
   helmLatest=$(curl --proto "=https" -sL -H "Authorization: token ${GITHUB_TOKEN}"  https://api.github.com/repos/${helmRepo}/tags?per_page=2 |jq -r ".[].name"|sed 's/^v//'|sort -V |grep -v -)
